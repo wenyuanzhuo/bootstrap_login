@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>segmentfault 活动</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css
+
+">
+    <style>
+    /*通用业务样式  与框架样式是有别的tools*/
+    /*.clearfix {
+        clear: both;
+    }
+    .h5{
+        font-weight: 500;
+        font-size: 20px;
+    }*/
+    .h4 {
+        font-size: 18px;
+    }
+    .mt20 {
+        margin-top:20px !important;
+    }
+    .mb10 {
+        margin-bottom:10px !important;
+    }
+    /* ysw业务样式 event 模块样式 */
+    .all-event-list {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .all-event-list [class*=col-md] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    /*开发一个widget，是组件化开发之前的说法*/
+    .widget-event {
+      position: relative;
+      margin-bottom: 20px;
+      border: 1px solid #eee;
+      background: #f3f3f3;
+      height: 282px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    /*BEM ELement*/
+    /*图片变形
+    w*h 跟图片的比例不一样
+    小编用程序员后台上活动  作图 238*134
+     20 优先级公式   id=100 class=10 tag=1 important最高  行内样式除了imporant最高*/
+      .all-event-list .widget-event__banner {
+      display: inline;
+      border-bottom: 1px solid #eee;
+      width: 100%;
+      background-color: #fff;
+      height: 135px;
+    }
+    /*BEM element info*/
+    .widget-event__info {
+      padding: 15px 15px 0;
+
+    }
+    .widget-event__info .title {
+      margin: 0;
+      font-size: 16px;
+      /*小编一行两行都可以*/
+      max-height: 38px;
+      overflow: hidden;
+    }
+    .widget-event__info .title a {
+      color: #333;
+    }
+    /*BEM  Element 不是简单的递进过程
+         Element 是为block服务的   meta跟时间有关 */
+    .widget-event__meta {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0;
+      font-size: 13px;
+      color: #999;
+    }
+    .widget-event__info .btn {
+       position: absolute;
+       right: 15px;
+       bottom: 15px;
+    }
+    /*媒体查询 设备进行查询条件
+    微调--针对设备调节   最大宽度为767 ipad竖着拿的时候1024*768
+     覆盖式修改 css 优先级的问题*/
+    @media(max-width:767px) {
+        /*只用于手机设备大改造*/
+       .all-event-list .widget-event__banner {
+         height: initial ;
+       }
+       .widget-event {
+         padding-bottom: 15px;
+         height: auto;
+       }
+    }
+    /* ysw业务样式 event 模块样式 end */
+    </style>
+</head>
+<body>
+<!-- Layout 网页布局 -->
+<div class="container">
+    <div class="row all-event-list mt20">
+        <!-- 自适应网页设计 RWD 必考
+        一份代码 全设备运行
+        电脑pc  md , ipad middle screen 1000-1400, small screen 750-1000 ,phone exstremly small <750,
+        iMac lg large screen 1400px
+        device width 有关手动调整屏幕宽度 来设置横竖屏切换 Bootstrap 实现方便在同一列上针对不同设备使用不同的列宽定义 -->
+
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="widget-event">
+                <a href="#">
+                    <img  id="banner" src="https://sfault-activity.b0.upaiyun.com/952/032/95203245-59686c3f459c3_medium"
+                    alt="" class="widget-event__banner">
+                </a>
+                <div class="widget-event__info">
+                    <h2 class="h4 title">
+                        <a href="#">Microsoft Tech Summit 2017</a>
+                    </h2>
+                    <ul class="widget-event__meta">
+                        <li>时间:2017-10-23 周一</li>
+                        <li>城市:北京</li>
+                    </ul>
+                    <!-- 在bootstrap 里根元素无关 只关心类名 div.btn -->
+                    <a href="#"
+                    class="btn btn-primary btn-sm">立即报名</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="widget-event">
+                <a href=""><img src="" alt="" class="widget-event__banner"></a>
+                <div class="widget-event__info">
+                    <h2 class="h4 title"><a href=""></a></h2>
+                    <ul class="widget-event__meta">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <a href="" class="btn btn-primary btn-sm"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="widget-event">
+                <a href=""><img src="" alt="" class="widget-event__banner"></a>
+                <div class="widget-event__info">
+                    <h2 class="h4 title"><a href=""></a></h2>
+                    <ul class="widget-event__meta">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <a href="" class="btn btn-primary btn-sm"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="widget-event">
+                <a href=""><img src="" alt="" class="widget-event__banner"></a>
+                <div class="widget-event__info">
+                    <h2 class="h4 title"><a href=""></a></h2>
+                    <ul class="widget-event__meta">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <a href="" class="btn btn-primary btn-sm"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="text-center">
+      <ul class="pagination">
+        <li><a class="active" href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="disabled">
+          <span>
+            ...
+          </span>
+        </li>
+        <li class="next">
+          <a href="#" rel="next">下一页</a>
+        </li>
+      </ul>
+    </div>
+</div>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        //  window.onload
+        //  documentReady事件
+        //  这是绑定的最佳时间
+        //  $() 函数dom querySelectorAll
+        //  将html 变成 dom  节点$ ('<li></li>')
+        //  匿名函数是jquery开始的事件
+         $(function() {
+           let newPageEles= $('.all-event-list>div:nth-child(2n)');
+           console.log('newPageEles');
+           $('.all-event-list').on('cilck', "a.btn", function() {
+             alert('报名');
+             return false;
+           })
+          //  jquery 做多元素的事件绑定一绝
+           $('.pagination a').click(function(event) {
+            //  阻止默认行为 原生js
+            //  event.preventDefault();
+             alert('a');
+            //  当前页不需要做任何事
+            // jquery 里原生对象必须转成jquery对象才能调用jquery的链式方法
+            // jquery对象转成Js   dom 对象[0]
+              //  console.log($(this).parent()[0]);...1
+            if($(this).parent().hasClass('active')) {
+              return false;
+            }
+            //  拿到页码
+              let page = $(this).html();
+              console.log(page);
+              $('.pagination .active').removeClass('active');
+            //  把之前的active 去除,加载自己的父元素li上
+            $(this).parent().addClass('active');
+             $('.all-event-list').html('');
+            // 类数组变成真正的数组 Array.from
+            for(ele of Array.from(newPageEles)) {
+              $('.all-event-list').append($(ele));
+            }
+            //  阻止默认行为jquery
+             return false;
+
+           })
+         })
+    </script>
+</body>
+</html>
